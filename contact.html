@@ -1,0 +1,193 @@
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Lesotho</title>
+  <h2>Contact and Bookings Page</h2>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Explore Lesotho</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteMenu" aria-controls="siteMenu" aria-expanded="false" aria-label="Open navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteMenu">
+        <ul class="navbar-nav ms-auto">
+<li class="nav-item">
+  <a class="nav-link" href="index.html">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="about.html">About</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="destinations.html">Destinations</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="gallery.html">Gallery</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" href="contact.html">Contact / Booking</a>
+</li>
+<li class="nav-item">
+  <button class="btn btn-sm mode-button ms-lg-2" id="modeButton" type="button">Dark mode</button>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+
+<main>
+
+<section class="page-banner">
+  <div class="container">
+    <h1>Contact and booking</h1>
+    <p>Use the forms below to practise planning your trip.</p>
+  </div>
+</section>
+
+<section class="container section-space">
+
+  <div class="alert alert-info" role="alert">
+    <strong>Student project:</strong> These forms show a confirmation message on this page. They do not send information to a real travel company.</div>
+
+  <div class="row g-5">
+    <div class="col-lg-7">
+      <div class="form-panel">
+        <h2>Booking request</h2>
+        <p>Tell us where you would like to go.</p>
+        <form id="bookingForm" novalidate>
+          <div class="mb-3">
+            <label class="form-label" for="bookingName">Full name</label>
+            <input class="form-control" type="text" id="bookingName" required minlength="2">
+            <div class="invalid-feedback">Please enter your name (at least 2 letters).</div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="bookingEmail">Email address</label>
+            <input class="form-control" type="email" id="bookingEmail" required>
+            <div class="invalid-feedback">Enter a valid email address.</div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="tripPlace">Destination</label>
+              <select class="form-select" id="tripPlace" required>
+                <option value="">Choose a place</option>
+                <option>Maloti Mountains</option>
+                <option>Maletsunyane Falls</option>
+                <option>Katse Dam</option>
+                <option>Basotho culture tour</option>
+              </select>
+
+              <div class="invalid-feedback">Please choose a destination.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="tripDate">Travel date</label>
+              <input class="form-control" type="date" id="tripDate" required>
+              <div class="invalid-feedback">Choose a date that is not in the past.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="visitorCount">Number of people</label>
+              <input class="form-control" type="number" id="visitorCount" min="1" max="20" value="1" required>
+              <div class="invalid-feedback">Choose between 1 and 20 people.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="tripType">Trip type</label>
+              <select class="form-select" id="tripType">
+                <option value="100">Day visit (M100 per person)</option>
+                <option value="250">Weekend trip (M250 per person)</option>
+                <option value="500">Three-day trip (M500 per person)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="estimate-box mt-3">
+            <span>Estimated sample cost:</span>
+            <strong id="costEstimate">M100</strong>
+            <small>This is a classroom example, not a real travel price.</small>
+          </div>
+
+          <div class="mb-3 mt-3">
+            <label class="form-label" for="bookingNotes">Extra information</label>
+            <textarea class="form-control" id="bookingNotes" rows="3" placeholder="Any details you want to add">
+              
+            </textarea>
+          </div>
+          <button class="btn main-btn" type="submit">Send booking request</button>
+          <p id="bookingResult" class="form-result" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="form-panel">
+        <h2>Contact form</h2>
+        <p>Send a question or message.</p>
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <label class="form-label" for="contactName">Your name</label>
+            <input class="form-control" type="text" id="contactName" required minlength="2">
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="contactEmail">Email address</label>
+            <input class="form-control" type="email" id="contactEmail" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="contactSubject">Subject</label>
+            <select class="form-select" id="contactSubject" required>
+              <option value="">Choose a subject</option>
+              <option>Destinations</option>
+              <option>Accommodation</option>
+              <option>Activities</option>
+              <option>Other question</option>
+            </select>
+
+            <div class="invalid-feedback">Please select a subject.</div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="contactMessage">Message</label>
+            <textarea class="form-control" id="contactMessage" rows="4" required minlength="10">
+              
+            </textarea>
+            <div class="invalid-feedback">Please write at least 10 characters.</div>
+          </div>
+          <button class="btn main-btn" type="submit">Submit message</button>
+          <p id="contactResult" class="form-result" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Tourism Website Project
+     <span class="current-year"></span>
+   </p>
+   <p class="footer-note">Information: Visit Lesotho and Lesotho Government tourism resources.Established by:Lekena Sefali</p>
+ </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

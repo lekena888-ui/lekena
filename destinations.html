@@ -1,0 +1,181 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Lesotho</title>
+  <h2>Destinations and Activities Page</h2>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Explore Lesotho</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteMenu" aria-controls="siteMenu" aria-expanded="false" aria-label="Open navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteMenu">
+        <ul class="navbar-nav ms-auto">
+<li class="nav-item">
+  <a class="nav-link" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link" href="about.html">About</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" href="destinations.html">Destinations</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="gallery.html">Gallery</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="contact.html">Contact / Booking</a>
+</li>
+<li class="nav-item">
+  <button class="btn btn-sm mode-button ms-lg-2" id="modeButton" type="button">Dark mode</button>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+
+<main>
+
+<section class="page-banner">
+  <div class="container">
+    <h1>Destinations and activities</h1>
+    <p>Search the list or choose a type of place.</p>
+  </div>
+</section>
+
+<section class="container section-space">
+  <div class="row g-3 mb-4 align-items-end">
+    <div class="col-md-7">
+      <label for="destinationSearch" class="form-label">Search destinations</label>
+      <input type="search" id="destinationSearch" class="form-control" placeholder="Try mountains, waterfall, dam..."></div>
+    <div class="col-md-5">
+      <label for="destinationFilter" class="form-label">Filter by type</label>
+      <select id="destinationFilter" class="form-select">
+        <option value="all">All places</option>
+        <option value="nature">Nature</option>
+        <option value="adventure">Adventure</option>
+        <option value="culture">Culture</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="destinationAlert" class="alert alert-info d-none" role="status">No places match your search. Try another word.</div>
+  <div class="row g-4" id="destinationList">
+    <div class="col-md-6 col-lg-4 destination-item" data-category="nature adventure" data-name="sehlabathebe national park grassland rock art wetlands nature">
+      <article class="card destination-card h-100">
+        <img class="card-img-top" src="Sehlabathebe.jpg" alt="Mountain peaks">
+        <div class="card-body">
+          <span class="badge text-bg-info mb-2">Nature</span>
+          <h2 class="h5">Sehlabathebe National Park</h2>
+          <p>Mountain scenery, fresh air and walking opportunities.</p>
+          <button class="btn small-btn details-button" data-title="Maloti Mountains" data-info="Sehlabathebe National Park lies in Qacha's Nek District. It is known for its distinctive highland landscape, rock art and biodiversity. Some approach roads are rough, so check local travel conditions before visiting.">More information</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-md-6 col-lg-4 destination-item" data-category="nature adventure" data-name="maletsunyane falls waterfall semonkong">
+      <article class="card destination-card h-100">
+        <img class="card-img-top" src="Maletsunyane.jpg" alt="Waterfall over rocks"><div class="card-body">
+          <span class="badge text-bg-info mb-2">Nature</span>
+          <h2 class="h5">Maletsunyane Falls</h2>
+          <p>A famous waterfall near Semonkong with beautiful views.</p>
+          <button class="btn small-btn details-button" data-title="Maletsunyane Falls" data-info="Maletsunyane Falls is a well-known attraction near Semonkong. Check local conditions and use a guide where needed.">More information</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-md-6 col-lg-4 destination-item" data-category="nature" data-name="katse dam reservoir lesotho highlands water project">
+      <article class="card destination-card h-100">
+        <img class="card-img-top" src="Katse dam.jpg" alt="Open green landscape">
+        <div class="card-body">
+          <span class="badge text-bg-info mb-2">Nature</span>
+          <h2 class="h5">Katse Dam</h2>
+          <p>A major reservoir and dam in the Lesotho Highlands Water Project.</p>
+          <button class="btn small-btn details-button" data-title="Katse Dam" data-info="Katse Dam is part of the Lesotho Highlands Water Project. The reservoir and surrounding mountain scenery are popular for sightseeing. Check visitor arrangements before travelling.">More information</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-md-6 col-lg-4 destination-item" data-category="adventure" data-name="pony trekking horse adventure">
+      <article class="card destination-card h-100">
+        <img class="card-img-top" src="pony.jpg" alt="Horse standing outdoors">
+        <div class="card-body">
+          <span class="badge text-bg-warning mb-2">Adventure</span>
+          <h2 class="h5">Pony trekking</h2>
+          <p>Experience a traditional way to travel through rural areas.</p>
+          <button class="btn small-btn details-button" data-title ="Pony trekking" data-info="Pony trekking can be a memorable way to explore rural areas. Arrange a responsible local guide and follow safety instructions."> More information
+          </button>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-md-6 col-lg-4 destination-item" data-category="culture" data-name="thaba bosiu history moshoeshoe heritage culture">
+      <article class="card destination-card h-100">
+        <img class="card-img-top" src="Thaba bosiu.jpg" alt="Traditional village and landscape">
+        <div class="card-body">
+          <span class="badge text-bg-success mb-2">Culture</span>
+          <h2 class="h5">Basotho culture</h2>
+          <p>Visit a historic mountain stronghold linked to King Moshoeshoe I.</p>
+          <button class="btn small-btn details-button" data-title="Thaba Bosiu" data-info="Thaba Bosiu is a historic sandstone plateau associated with King Moshoeshoe I and the development of the Basotho nation. Consider a guided visit to learn more about its history.">More information</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-md-6 col-lg-4 destination-item" data-category="adventure culture" data-name="basotho pony trekking horses culture adventure">
+      <article class="card destination-card h-100">
+        <img class="card-img-top" src="pony2.jpg" alt="Hikers walking on a mountain trail">
+        <div class="card-body">
+          <span class="badge text-bg-warning mb-2">Adventure</span>
+          <h2 class="h5">Basotho pony trekking</h2>
+          <p>Experience pony travel with local guides in rural and highland areas.</p>
+          <button class="btn small-btn details-button" data-title="Basotho pony trekking" data-info="Ponies have long been important for travel in Lesotho’s mountainous areas. Arrange a responsible local guide, follow safety instructions and respect local communities.">More information</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<div class="modal fade" id="destinationModal" tabindex="-1" aria-labelledby="destinationModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="destinationModalTitle">Destination details</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="destinationModalBody"></div>
+
+      <div class="modal-footer">
+        <a href="contact.html" class="btn main-btn">Plan a visit</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Tourism Website Project 
+      <span class="current-year"></span>
+    </p>
+    <p class="footer-note">Information: Visit Lesotho and Lesotho Government tourism resources.Established by:Lekena Sefali</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
